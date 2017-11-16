@@ -51,8 +51,6 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 
     // MARK: - Navigation
  
@@ -67,14 +65,7 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "idSegueJoinChat", sender: nil)
-    }
-
-    
     // MARK: IBAction Methods
-    
-   
     @IBAction func exitChat(_ sender: UIBarButtonItem) {
         
         SocketIOManager.sharedInstance.exitChatWithNickName(nickName: nickname) {
@@ -85,6 +76,10 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.askForNickname()
             }
         }
+    }
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "idSegueJoinChat", sender: nil)
     }
     
     //Display Users
@@ -162,7 +157,7 @@ class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
         return 44.0
     }
     
