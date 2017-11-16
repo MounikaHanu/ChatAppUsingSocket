@@ -8,7 +8,7 @@
 //
 
 import UIKit
-
+ 
 class UserCell: BaseCell {
 
     override func awakeFromNib() {

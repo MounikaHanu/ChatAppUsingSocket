@@ -101,7 +101,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func sendMessage(_ sender: UIButton) {
         if tvMessageEditor.text.count > 0 {
             SocketIOManager.sharedInstance.sendMessage(message: tvMessageEditor.text!, withNickName: nickname)
-            
+      
             tvMessageEditor.resignFirstResponder()
             
             var message = [String: AnyObject]()

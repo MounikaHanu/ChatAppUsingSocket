@@ -45,7 +45,7 @@ class SocketIOManager: NSObject {
         }
     
 //    Chat Process Starts
-    
+   
     func sendMessage(message: String,withNickName givenickName: String){
         
         socket.emit("chatMessage",givenickName,message)

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+ 
 class ChatCell: BaseCell {
 
     @IBOutlet weak var lblChatMessage: UILabel!
